@@ -2,7 +2,9 @@ let kopek = 0;
 document.getElementById("adoptButton").style.display = "none";
 document.getElementById("hungryTiger").style.display = "none";
 
-function gagner () {
+initWebPd();
+
+function gagner() {
 
     // show tiger randomly
 
@@ -11,7 +13,7 @@ function gagner () {
         if (randomNum == 1) {
             // Add random tiger img
             let tiger_img = document.createElement("img");
-            tiger_img.src = "tigre.jpg";
+            tiger_img.src = "assets/img/tigre.jpg";
             tiger_img.width = 200;
             tiger_img.height = 90;
             document.body.appendChild(tiger_img);
@@ -38,18 +40,18 @@ function adoptTiger() {
     }
     document.getElementById("hungryTiger").style.display = "block";
 
-        // Increment kopeck variable
-        let a = document.getElementById("kopek");
-        console.log(a)
-        kopek = 0;
-        a.innerHTML = "Actuellement " + kopek + " kopeks.";
+    // Increment kopeck variable
+    let a = document.getElementById("kopek");
+    console.log(a)
+    kopek = 0;
+    a.innerHTML = "Actuellement " + kopek + " kopeks.";
 }
 
 function addKopek() {
     // Add kopeck img
     let kopek_img = document.createElement("img");
     kopek_img.setAttribute('id', 'kopek-' + kopek);
-    kopek_img.src = "kopek.jpeg";
+    kopek_img.src = "assets/img/kopek.jpeg";
     kopek_img.width = 50;
     kopek_img.height = 50;
     document.body.appendChild(kopek_img);
