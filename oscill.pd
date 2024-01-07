@@ -1,0 +1,16 @@
+#N canvas 512 229 815 508 12;
+#X obj 327 363 dac~;
+#X obj 395 189 vsl 15 128 0 1 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 1270 1;
+#X obj 168 252 *~;
+#X obj 160 176 osc~ 440;
+#X obj 37 38 loadbang;
+#X msg 47 73 \; pd dsp \$1;
+#X msg 142 16;
+#X msg 354 57 0.1;
+#X connect 1 0 2 1;
+#X connect 2 0 0 0;
+#X connect 3 0 2 0;
+#X connect 4 0 5 0;
+#X connect 4 0 7 0;
+#X connect 7 0 1 0;
